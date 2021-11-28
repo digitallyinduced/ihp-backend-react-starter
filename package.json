@@ -1,0 +1,20 @@
+{
+  "name": "ihp-backend-react-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "esbuild": "^0.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "serve": "^13.0.2",
+    "ihp-datasync": "https://gitpkg.now.sh/digitallyinduced/ihp/lib/IHP/DataSync?bca3bd6deea53440464d2352e04a5ae95d174eae",
+    "ihp-backend": "https://ihpbackend.digitallyinduced.com/ihp-backend.tar.gz?bca3bd6deea53440464d2352e04a5ae95d174eae"
+  },
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "watch": "./node_modules/.bin/esbuild app.jsx --bundle --outfile=public/app.js --watch",
+    "server": "./node_modules/.bin/serve public"
+  }
+}
