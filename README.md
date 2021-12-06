@@ -4,18 +4,18 @@
 
 On first start install the npm dependencies:
 
-```javascript
+```bash
 npm install
 ```
 
 After this you can start the web server and esbuild watcher:
 
-```javascript
+```bash
 npm run start
 ```
 
 ## Bundling for Production
 
-```javascript
+```bash
 npm run build
 ```
