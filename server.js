@@ -2,6 +2,12 @@ import esbuild from 'esbuild'
 import { createServer, request } from 'http'
 import { spawn } from 'child_process'
 
+/* Want to hardcode your app url? Just modify this variable here */
+const BACKEND_URL = process.env.BACKEND_URL;
+if (!BACKEND_URL) {
+  throw new Error('The BACKEND_URL env variable is not set. Open the `server.js` and add a hardcoded default value, or make sure that the env var is always set.');
+}
+
 const clients = []
 
 esbuild
@@ -11,7 +17,8 @@ esbuild
     outfile: 'public/app.js',
     banner: { js: ' (() => new EventSource("/esbuild").onmessage = () => location.reload())();' },
     define: {
-      'process.env.NODE_ENV': JSON.stringify("development")
+      'process.env.NODE_ENV': JSON.stringify("development"),
+      'process.env.BACKEND_URL': JSON.stringify(BACKEND_URL)
     },
     watch: {
       onRebuild(error, result) {
