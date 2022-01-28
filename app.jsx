@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as ReactDOM from 'react-dom'
 
-import { initIHPBackend, query, DataSubscription, createRecord, updateRecord, deleteRecord, createRecords } from 'ihp-datasync';
-import { useQuery } from 'ihp-datasync/react';
-import { ensureIsUser, useCurrentUser, logout } from 'ihp-backend';
+import { initIHPBackend, query, DataSubscription, createRecord, updateRecord, deleteRecord, createRecords, ensureIsUser, logout } from 'ihp-backend';
+import { useQuery, useCurrentUser } from 'ihp-backend/react';
 
 function App() {
     // With `useQuery()` you can access your database:
