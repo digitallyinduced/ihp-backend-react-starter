@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as ReactDOM from 'react-dom'
 
-import { initIHPBackend, query, DataSubscription, createRecord, updateRecord, deleteRecord, createRecords, logout } from 'ihp-backend';
-import { useQuery, useCurrentUser, IHPBackend } from 'ihp-backend/react';
+import { initIHPBackend, query, DataSubscription, createRecord, updateRecord, deleteRecord, createRecords, logout } from 'thin-backend';
+import { useQuery, useCurrentUser, ThinBackend } from 'thin-backend/react';
 
 function App() {
     // With `useQuery()` you can access your database:
@@ -10,11 +10,11 @@ function App() {
     //     const todos = useQuery(query('todos').orderBy('createdAt'));
     //
 
-    return <IHPBackend requireLogin>
+    return <ThinBackend requireLogin>
         <div className="container">
             <AppNavbar/>
         </div>
-    </IHPBackend>
+    </ThinBackend>
 }
 
 function AppNavbar() {
