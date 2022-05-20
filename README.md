@@ -1,6 +1,12 @@
-# IHP React Starter
+# Thin React Starter
 
 ## Usage
+
+Create a new project:
+
+```bash
+npx degit digitallyinduced/thin-react-starter myproject
+```
 
 On first start install the npm dependencies:
 
