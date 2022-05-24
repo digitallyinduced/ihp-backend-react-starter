@@ -7,7 +7,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "esbuild": "^0.13.1",
-    "thin-backend": ">=0.8.1",
+    "thin-backend": ">=0.9.0",
     "thin-backend-react": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import * as ReactDOM from 'react-dom'
 
-import { initIHPBackend, query, DataSubscription, createRecord, updateRecord, deleteRecord, createRecords, logout } from 'thin-backend';
-import { useQuery, useCurrentUser, ThinBackend } from 'thin-backend/react';
+import { initThinBackend, query, DataSubscription, createRecord, updateRecord, deleteRecord, createRecords, logout } from 'thin-backend';
+import { useQuery, useCurrentUser, ThinBackend } from 'thin-backend-react';
+import 'thin-backend-react/auth.css';
 
 function App() {
     // With `useQuery()` you can access your database:
@@ -41,7 +42,7 @@ function AppNavbar() {
 }
 
 // This needs to be run before any calls to `query`, `createRecord`, etc.
-initIHPBackend({ host: process.env.BACKEND_URL });
+initThinBackend({ host: process.env.BACKEND_URL });
 
 // Start the React app
 ReactDOM.render(<App/>, document.getElementById('app'));
